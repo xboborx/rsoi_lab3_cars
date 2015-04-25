@@ -13,7 +13,7 @@ class CarsController < ApplicationController
   def destroy
     if car = Car.find_by_id(params[:id])
       car.destroy
-      redirect_to "http://localhost:3000/"
+      redirect_to FRONTEND
       #render :json => JSON("deleted" => params[:id])
     else
       render :json => JSON("error" => "Not found"), :status => 404
@@ -28,7 +28,7 @@ class CarsController < ApplicationController
     car.color = params[:color]
     car.image = params[:image]
     car.save
-    redirect_to "http://localhost:3000/"
+    redirect_to FRONTEND
     #render :json => JSON("status" => 'ok')
   end
 

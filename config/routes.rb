@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'cars/:id' => 'cars#view'
   get 'cars' => 'cars#index'
 
+
+
   delete 'cars/:id' => 'cars#destroy'
 
   post 'cars' => 'cars#create'
